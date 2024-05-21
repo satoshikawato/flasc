@@ -75,7 +75,7 @@ def _get_args():
         type=str,
         required=True,
         help='query sequence')
-    parser.add_argument("--all", action="store_true", help="print all scanned sites regardless of mutations")
+    parser.add_argument("--mode", type=str, default="all", help="mode (all, variants, strict)", choices=["all", "variants", "strict"])
     parser.add_argument("-t", "--target", type=str, help="target gene")
     if len(sys.argv) == 1:
         parser.print_help(sys.stderr)
@@ -109,28 +109,34 @@ def determine_residue_coordinate(record, gap_character):
     return coordinate_dict
 
 
-def print_residue_coordinate(ref_record, records, coordinate_dict, gap_character, mutations_of_concern, query_list, all=False):
+def print_residue_coordinate(ref_record, records, coordinate_dict, gap_character, mutations_of_concern, query_list, mode="all"):
     for query in query_list:
         for key in mutations_of_concern.keys():
             mutation_name =  mutations_of_concern[key]['name']
             gene_id = mutations_of_concern[key]['gene_id']
             note = mutations_of_concern[key]['note']
-            target = int(mutations_of_concern[key]['coordinate'])
+            
             wildtype = "/".join(mutations_of_concern[key]['wildtype'])
+            if 'coordinate' in mutations_of_concern[key].keys():
+                target_coordinate = mutations_of_concern[key]['coordinate']
+            else:
+                continue
             for record in records:
                 if record.id == query:
-                    record_coordinate = len(record.seq[:coordinate_dict[target]].replace(gap_character, "")) + 1
-                    if all:
-                        print(f"{record.id}\t{gene_id}\t{record_coordinate}\t{mutation_name}\t{wildtype}\t{record.seq[coordinate_dict[target]]}\t{note}")
+                    record_coordinate = len(record.seq[:coordinate_dict[target_coordinate]].replace(gap_character, "")) + 1
+                    if mode == "variants":
+                        if record.seq[coordinate_dict[target_coordinate]] != mutations_of_concern[key]['wildtype']:
+                            print(f"{record.id}\t{gene_id}\t{record_coordinate}\t{mutation_name}\t{wildtype}\t{record.seq[coordinate_dict[target_coordinate]]}\t{note}")   
+                    elif mode == "strict":
+                        if record.seq[coordinate_dict[target_coordinate]] == mutations_of_concern[key]['mutant']:
+                            print(f"{record.id}\t{gene_id}\t{record_coordinate}\t{mutation_name}\t{wildtype}\t{record.seq[coordinate_dict[target_coordinate]]}\t{note}")
                     else:
-                        if record.seq[coordinate_dict[target]] == mutations_of_concern[key]['mutant']:
-                            print(f"{record.id}\t{gene_id}\t{record_coordinate}\t{mutation_name}\t{wildtype}\t{record.seq[coordinate_dict[target]]}\t{note}")
-
+                        print(f"{record.id}\t{gene_id}\t{record_coordinate}\t{mutation_name}\t{wildtype}\t{record.seq[coordinate_dict[target_coordinate]]}\t{note}")
 def main():
     args = _get_args()
     in_fa = args.input
     out_file = args.output
-    all = args.all
+    mode = args.mode
     queries = args.query
     gap_character = args.gap
     mutation_db = args.db
@@ -160,10 +166,10 @@ def main():
         with open(out_file, 'w') as f:
             with redirect_stdout(f):
                 print(f"query\tgene\tcoordinate\tvariant\treference\tresidue\tnote")
-                print_residue_coordinate(ref_record, records, coordinate_dict, gap_character, mutations_of_concern, query_list, all)
+                print_residue_coordinate(ref_record, records, coordinate_dict, gap_character, mutations_of_concern, query_list, mode)
     else:
         print(f"query\tgene\tcoordinate\tvariant\treference\tresidue\tnote")
-        print_residue_coordinate(ref_record, records, coordinate_dict, gap_character, mutations_of_concern, query_list, all)
+        print_residue_coordinate(ref_record, records, coordinate_dict, gap_character, mutations_of_concern, query_list, mode)
 
 
 if __name__ == "__main__":

@@ -9,7 +9,8 @@ mutant = "K"
 coordinate = "627"
 reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
 note = "mammalian adaptation"
-
+citations = ["https://doi.org/10.1126/science.1062882",
+            "https://doi.org/10.1128/jvi.67.4.1761-1764.1993"]
 [PB2.D701N]
 name = "D701N"
 protein_id = "YP_308664.1"
@@ -79,6 +80,18 @@ coordinate = "473"
 reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
 note = "mammalian adaptation"
 
+[PB1.K577E]
+name = "L473V"
+protein_id = ""
+gene_id = "PB1"
+subtypes = "all"
+wildtype = "K"
+coordinate = "577"
+mutant = "E"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation (mice)"
+citations = ["https://doi.org/10.3390/v10110653"]
+
 [PB1."L598P"]
 name = "L598P"
 protein_id =  ""
@@ -118,6 +131,7 @@ note = "mammalian adaptation"
 [HA]
 [HA.N158D]
 name = "N158D"
+synonym = "N154D (H5 numbering)"
 protein_id = "P03437.1"
 gene_id = "HA"
 subtypes = "all"
@@ -126,7 +140,20 @@ wildtype = "N"
 mutant = "D"
 coordinate = 158
 reference_isolate = "A/Aichi/2/1968(H3N2)"
-note = "H3 numbering; mammalian adaptation"
+note = "H3 numbering; synonym: N154D (H5 numbering); mammalian adaptation (enhanced droplet transmission in ferrets)"
+citations = ["https://doi.org/10.1038/nature10831"]
+
+[HA.FCS]
+name = "FCS"
+type = "cleavage_site"
+protein_id = ""
+gene_id = "HA"
+subtypes = ["H5", "H7"]
+wildtype = "[^RK]RG"
+mutant = "[RK]{3,}G"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "furin cleavage site (e.g. RRRKKRG)"
+citations = ["https://doi.org/10.1073/pnas.85.2.324", "https://doi.org/10.1002/j.1460-2075.1992.tb05305.x"]
 
 [HA.T160A]
 name = "T160A"
@@ -143,33 +170,36 @@ note = "H3 numbering; mammalian adaptation"
 
 [HA.N186K]
 name = "N186K"
+synonym = "N182K (H5 numbering)"
 protein_id = "P03437.1"
 gene_id = "HA"
-subtypes = "all"
+subtypes = "H5"
 numbering = "H3"
 wildtype = "N"
 coordinate = 186
 mutant = "K"
 reference_isolate = "A/Aichi/2/1968(H3N2)"
-note = "H3 numbering; mammalian adaptation"
+note = "H3 numbering; synonym: N182K (H5 numbering); mammalian adaptation (enhanced binding to alpha-2,6 SA)"
 
 [HA.Q196R]
 name = "Q196R"
+synonym = "Q192R (H5 numbering)"
 protein_id = "P03437.1"
 gene_id = "HA"
-subtypes = "all"
+subtypes = "H5"
 numbering = "H3"
 wildtype = "Q"
 coordinate = 196
 mutant = "R"
 reference_isolate = "A/Aichi/2/1968(H3N2)"
-note = "H3 numbering; mammalian adaptation"
+note = "H3 numbering; synonym: Q192R (H5 numbering); mammalian adaptation (enhanced binding to alpha-2,6 SA)"
+citations = ["https://doi.org/10.1038/nature05264"]
 
 [HA.N224K]
 name = "N224K"
 protein_id = "P03437.1"
 gene_id = "HA"
-subtypes = "all"
+subtypes = "H5"
 numbering = "H3"
 wildtype = "N"
 coordinate = 224
@@ -177,17 +207,31 @@ mutant = "K"
 reference_isolate = "A/Aichi/2/1968(H3N2)"
 note = "H3 numbering; mammalian adaptation"
 
-[HA.Q226L]
-name = "Q226L"
+[HA.K194R]
+name  = "K193R"
+synonym = "K189R (H5 numbering)"
 protein_id = "P03437.1"
 gene_id = "HA"
-subtypes = "all"
+subtypes = "H5"
+numbering = "H3"
+wildtype = "K"
+coordinate = 193
+mutant = "R"
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "H3 numbering; synonym: K189R (H5 numbering); mammalian adaptation"
+
+[HA.Q226L]
+name = "Q226L"
+synonym = "Q222L (H5 numbering)"
+protein_id = "P03437.1"
+gene_id = "HA"
+subtypes = "H5"
 numbering = "H3"
 wildtype = "Q"
 coordinate = 226
 mutant = "L"
 reference_isolate = "A/Aichi/2/1968(H3N2)"
-note = "H3 numbering; mammalian adaptation"
+note = "H3 numbering; synonym: Q222L (H5 numbering); mammalian adaptation"
 
 [HA.G228S]
 name = "G228S"
