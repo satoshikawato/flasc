@@ -1,0 +1,334 @@
+[PB2]
+[PB2.E627K]
+name = "E627K"
+protein_id = "YP_308664.1"
+gene_id = "PB2"
+subtypes = "all"
+wildtype = "E"
+mutant = "K"
+coordinate = "627"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+[PB2.D701N]
+name = "D701N"
+protein_id = "YP_308664.1"
+gene_id = "PB2"
+subtypes = "all"
+wildtype = "D"
+mutant = "N"
+coordinate = "701"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+[PB2.Q591K]
+name = "Q591K"
+protein_id = "YP_308664.1"
+gene_id = "PB2"
+subtypes = "all"
+wildtype = "Q"
+mutant = "K"
+coordinate = "591"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+[PB2."T/I271A"] # Can a toml key contain a slash? Yes, but it must be quoted.
+name = "T/I271A"
+protein_id = "YP_308664.1"
+gene_id = "PB2"
+subtypes = "all"
+wildtype = ["T", "I"]
+mutant = "A"
+coordinate = "271"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+[PB2."K526R"]
+name = "K526R"
+protein_id = "YP_308664.1"
+gene_id = "PB2"
+subtypes = "all"
+wildtype = "K"
+mutant = "R"
+coordinate = "526"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+[PB2."558V"]
+name = "558V"
+protein_id = "YP_308664.1"
+gene_id = "PB2"
+subtypes = "all"
+wildtype = "-"
+mutant = "V"
+coordinate = "558"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+
+[PB1]
+
+[PB1."L473V"]
+name = "L473V"
+protein_id = ""
+gene_id = "PB1"
+subtypes = "all"
+wildtype = "L"
+mutant = "V"
+coordinate = "473"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+[PB1."L598P"]
+name = "L598P"
+protein_id =  ""
+gene_id = "PB1"
+subtypes = "all"
+wildtype = "L"
+mutant = "P"
+coordinate = "598"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+
+[PA]
+
+[PA."A36T"]
+name = "A36T"
+protein_id = ""
+gene_id = "PA"
+subtypes = "all"
+wildtype = "A"
+mutant = "T"
+coordinate = "36"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+[PA."V100A"]
+name = "V100A"
+protein_id = ""
+gene_id = "PA"
+subtypes = "all"
+wildtype = "V"
+mutant = "A"
+coordinate = "100"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+[HA]
+[HA.N158D]
+name = "N158D"
+protein_id = "P03437.1"
+gene_id = "HA"
+subtypes = "all"
+numbering = "H3"
+wildtype = "N"
+mutant = "D"
+coordinate = 158
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "H3 numbering; mammalian adaptation"
+
+[HA.T160A]
+name = "T160A"
+protein_id = "P03437.1"
+gene_id = "HA"
+subtypes = "all"
+numbering = "H3"
+wildtype = "T"
+mutant = "A"
+coordinate = 160
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "H3 numbering; mammalian adaptation"
+
+
+[HA.N186K]
+name = "N186K"
+protein_id = "P03437.1"
+gene_id = "HA"
+subtypes = "all"
+numbering = "H3"
+wildtype = "N"
+coordinate = 186
+mutant = "K"
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "H3 numbering; mammalian adaptation"
+
+[HA.Q196R]
+name = "Q196R"
+protein_id = "P03437.1"
+gene_id = "HA"
+subtypes = "all"
+numbering = "H3"
+wildtype = "Q"
+coordinate = 196
+mutant = "R"
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "H3 numbering; mammalian adaptation"
+
+[HA.N224K]
+name = "N224K"
+protein_id = "P03437.1"
+gene_id = "HA"
+subtypes = "all"
+numbering = "H3"
+wildtype = "N"
+coordinate = 224
+mutant = "K"
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "H3 numbering; mammalian adaptation"
+
+[HA.Q226L]
+name = "Q226L"
+protein_id = "P03437.1"
+gene_id = "HA"
+subtypes = "all"
+numbering = "H3"
+wildtype = "Q"
+coordinate = 226
+mutant = "L"
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "H3 numbering; mammalian adaptation"
+
+[HA.G228S]
+name = "G228S"
+protein_id = "P03437.1"
+gene_id = "HA"
+subtypes = "all"
+numbering = "H3"
+wildtype = "G"
+coordinate = 228
+mutant = "S"
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "H3 numbering; mammalian adaptation"
+
+[HA.T318I]
+name = "T318I"
+protein_id = "P03437.1"
+gene_id = "HA"
+subtypes = "all"
+numbering = "H3"
+wildtype = "T"
+coordinate = 318
+mutant = "I"
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "H3 numbering; mammalian adaptation"
+
+[NP]
+
+[NA]
+[NA.E119V]
+name = "E119V"
+protein_id = "P03473.1"
+gene_id = "NA"
+subtypes = "N2"
+numbering = "N2"
+wildtype = "E"
+coordinate = 119
+mutant = "V"
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "N2 numbering; oseltamivir resistance; synergistic with I222L "
+
+[NA.I222L]
+name = "I222L"
+protein_id = "P03473.1"
+gene_id = "NA"
+subtypes = "N2"
+numbering = "N2"
+wildtype = "I"
+coordinate = 222
+mutant = "L"
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "N2 numbering; oseltamivir resistance; synergistic with E119V"
+
+[NA.H274Y]
+name = "H274Y"
+protein_id = "P03473.1"
+gene_id = "NA"
+subtypes = "N2"
+numbering = "N2"
+wildtype = "H"
+coordinate = 274
+mutant = "Y"
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "N2 numbering; oseltamivir resistance"
+
+[NA.R292K]
+name = "R292K"
+protein_id = "P03473.1"
+gene_id = "NA"
+subtypes = "N2"
+numbering = "N2"
+wildtype = "R"
+coordinate = 292
+mutant = "K"
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "N2 numbering; oseltamivir resistance"
+
+[NA.N294S]
+name = "N294S"
+protein_id = "P03473.1"
+gene_id = "NA"
+subtypes = "N2"
+numbering = "N2"
+wildtype = "N"
+coordinate = 294
+mutant = "S"
+reference_isolate = "A/Aichi/2/1968(H3N2)"
+note = "N2 numbering; oseltamivir resistance"
+
+[M1]
+[M1."N30D"]
+name = "N30D"
+protein_id = ""
+gene_id = "M1"
+subtypes = "all"
+wildtype = "N"
+mutant = "D"
+coordinate = "30"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+
+[M1."T215A"]
+name = "T215A"
+protein_id = ""
+gene_id = "M1"
+subtypes = "all"
+wildtype = "T"
+mutant = "A"
+coordinate = "215"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+[M2]
+[M2."S31N"]
+name = "S31N"
+protein_id = ""
+gene_id = "M2"
+subtypes = "all"
+wildtype = "S"
+mutant = "N"
+coordinate = "31"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "adamantane resistance"
+
+[NS]
+[NS."P42S"]
+name = "P42S"
+protein_id = ""
+gene_id = "NS"
+subtypes = "all"
+wildtype = "P"
+mutant = "S"
+coordinate = "42"
+reference_isolate = "A/goose/Guangdong/1/1996(H5N1)"
+note = "mammalian adaptation"
+
+
+
+
+
+
+
+
+
